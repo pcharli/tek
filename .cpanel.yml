@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/example/public_html/tek
-    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
