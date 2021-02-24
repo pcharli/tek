@@ -122,7 +122,7 @@ autocomplete.forEach(field => {
                     e.preventDefault()
                     let texte = e.target.innerText
                     e.target.closest(".control").querySelector(".liste").innerHTML += `
-                    <li><input name="tags[]" checked type="checkbox" class="liste-item" value="${texte}">${texte} <a href="" class="delete"></a></li>
+                    <li><input name="${module}[]" checked type="checkbox" class="liste-item" value="${texte}">${texte} <a href="" class="delete"></a></li>
                     `
                     autocompleteText.innerHTML = ''
                     field.value = ""
