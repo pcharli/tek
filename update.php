@@ -232,29 +232,6 @@ endif;
         </main>
         <footer class="footer">&copy; l'R & l'O.be - 2021</footer>
     </div>
-    <script>
-    //listing des catégories
-    let categoriesList
-    fetch('categories.json')
-    .then( response => {
-      return response.json()
-    })
-    .then(datasJson => {
-      categoriesList = datasJson
-      console.log(categoriesList)
-    })
-
-     //listing des tags
-     let tagsList
-    fetch('tags.json')
-    .then( response => {
-      return response.json()
-    })
-    .then(datasJson => {
-      tagsList = datasJson
-      console.log(tagsList)
-    })
-    </script>
     <script src="main.js"></script>
 </body>
 </html>

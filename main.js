@@ -1,3 +1,26 @@
+//listing des catégories
+let categoriesList
+fetch('categories.json')
+.then( response => {
+  return response.json()
+})
+.then(datasJson => {
+  categoriesList = datasJson
+  console.log(categoriesList)
+})
+
+ //listing des tags
+ let tagsList
+fetch('tags.json')
+.then( response => {
+  return response.json()
+})
+.then(datasJson => {
+  tagsList = datasJson
+  console.log(tagsList)
+})
+
+
 let heart = document.querySelector(".fa-heart")
 let stars = document.querySelectorAll('.fa-star')
 let myInputs = document.querySelectorAll('.input, .textarea')
