@@ -94,12 +94,12 @@ unlink("recipes.json");
         </header>
         <main class="section container content">
             <h2>Récupérer la recette</h2>
-<a href="exports/<?php echo $slug;?>.rkt">Télécharger</a><br/>
+<a href="exports/<?php echo $slug;?>.rkt" class="bouton">Télécharger</a><br/>
 <p>Ou scannez le QRCode</p>
 <div id="qrcode"></div>
 <!--<div id="qrcode2"></div>-->
 </main>
-<footer class="footer">&copy; l'R & l'O.be - 2021</footer>
+<footer class="footer">&copy; <a href="https://lr-et-lo.be" target="_blank">l'R & l'O.be</a> - 2021</footer>
     </div>
 <script src="qrcode.min.js"></script>
 <script>

@@ -231,7 +231,7 @@ endif;
 
             </form>
         </main>
-        <footer class="footer">&copy; l'R & l'O.be - 2021</footer>
+        <footer class="footer">&copy; <a href="https://lr-et-lo.be" target="_blank">l'R & l'O.be</a> - 2021</footer>
     </div>
     <script src="main.js"></script>
 </body>
