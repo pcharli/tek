@@ -94,7 +94,7 @@ unlink("recipes.json");
         </header>
         <main class="section container content">
             <h2>Récupérer la recette</h2>
-<a href="exports/<?php echo $slug;?>.rkt" class="bouton">Télécharger</a><br/>
+<a href="exports/<?php echo $slug;?>.rkt" class="button">Télécharger</a><br/>
 <p>Ou scannez le QRCode</p>
 <div id="qrcode"></div>
 <!--<div id="qrcode2"></div>-->
