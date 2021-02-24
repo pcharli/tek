@@ -98,10 +98,12 @@ autocomplete.forEach(field => {
                     item.addEventListener("click", (e) => {
                     e.preventDefault()
                     let texte = e.target.innerText
-                    e.target.closest(".control").querySelector(".liste").innerHTML = `
+                    e.target.closest(".control").querySelector(".liste").innerHTML += `
                     <li><input name="tags[]" checked type="checkbox" class="liste-item" value="${texte}">${texte} <a href="" class="delete"></a></li>
                     `
                     autocompleteText.innerHTML = ''
+                    field.value = ""
+                    field.focus()
                     autocompleteText.classList.add("hidded")
                     document.querySelectorAll('.delete').forEach(function(el) {
                         //console.log(el)
@@ -115,6 +117,10 @@ autocomplete.forEach(field => {
                 
                
             }
+        } else {
+            let autocompleteText = cible.closest(".control").querySelector(".autocompleteText")
+            autocompleteText.innerHTML = ''
+            autocompleteText.classList.add('hidded')
         }
     })
 })
