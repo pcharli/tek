@@ -6,7 +6,7 @@ fetch('categories.json')
 })
 .then(datasJson => {
   categoriesList = datasJson
-  console.log(categoriesList)
+  //console.log(categoriesList)
 })
 
  //listing des tags
@@ -17,7 +17,7 @@ fetch('tags.json')
 })
 .then(datasJson => {
   tagsList = datasJson
-  console.log(tagsList)
+  //console.log(tagsList)
 })
 
 

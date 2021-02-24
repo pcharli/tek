@@ -60,7 +60,8 @@
                 <div class="field">
                     <label for="categories" class="label">Catégories</label>
                     <div class="control is-large">
-                      <input class="input indoor is-large" id="categories" type="text" placeholder="Catégories"> <a href="" class="button is-large fas fa-plus-square is-category"></a>
+                      <input class="input indoor is-large autocomplete" id="categories" type="text" placeholder="Catégories"> <a href="" class="button is-large fas fa-plus-square is-category"></a>
+                      <div class="autocompleteText hidded"></div>
                       <ul class="liste">
                       </ul>
                     </div>
@@ -69,7 +70,8 @@
                 <div class="field">
                     <label for="keywords" class="label">Mots-clés</label>
                     <div class="control is-large">
-                      <input class="input indoor is-large" id="keywords" type="text" placeholder="Mots-clés"> <a href="" class="button is-large fas fa-plus-square is-keyword"></a>
+                      <input class="input indoor is-large autocomplete" id="keywords" type="text" placeholder="Mots-clés"> <a href="" class="button is-large fas fa-plus-square is-keyword"></a>
+                      <div class="autocompleteText hidded"></div>
                       <ul class="liste">
                         
                     </ul>
