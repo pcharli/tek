@@ -2,6 +2,7 @@ let heart = document.querySelector(".fa-heart")
 let stars = document.querySelectorAll('.fa-star')
 let myInputs = document.querySelectorAll('.input, .textarea')
 let inputListesAdd = document.querySelectorAll('.fa-plus-square')
+let autocomplete = document.querySelectorAll('.autocomplete')
 
 heart.addEventListener('click', (e) => {
     e.preventDefault()
@@ -72,6 +73,43 @@ inputListesAdd.forEach(function(el) {
         
     })
 })
+
+//autocomplete des catégories & tags
+autocomplete.forEach(field => {
+    field.addEventListener("input", (e) => {
+        let cible = e.target
+        let module = cible.id
+        let listing = (module == 'categories') ? categoriesList : tagsList 
+        let values = cible.value
+        if (values.length > 2) {
+            let results = listing.filter(item => item.title.substr(0,3).toLowerCase() == values)
+            //console.log(results)
+            if(results.length > 0) {
+                let template = ''
+                results.forEach(item => {
+                    template += `
+                    <a href="" class="autocomplete-item">${item.title}</a></br>
+                    `
+                })
+                let autocompleteText = cible.closest(".control").querySelector(".autocompleteText")
+                autocompleteText.innerHTML = template
+                autocompleteText.classList.remove('hidded')
+                autocompleteText.querySelectorAll(".autocomplete-item").forEach(item => {
+                    item.addEventListener("click", (e) => {
+                    e.preventDefault()
+                    let texte = e.target.innerText
+                    e.target.closest(".control").querySelector("input").value = texte
+                    autocompleteText.innerHTML = ''
+                    autocompleteText.classList.add("hidded")
+                })
+                })
+                
+               
+            }
+        }
+    })
+})
+
 
 if(document.querySelectorAll('.delete')) {
 document.querySelectorAll('.delete').forEach(function(el) {
