@@ -1,0 +1,63 @@
+.header_logo {
+    height: 35px;
+}
+.stars {
+    margin-left: 3rem;
+    cursor: pointer;
+    color: yellow;
+    font-size: 24px;
+}
+.like {
+    cursor: pointer;
+    color: red;
+    font-size: 24px;
+}
+.label {
+    opacity: 0;
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+}
+.note {
+    font-style: italic;
+    font-size: .8rem;
+    margin-bottom: 1em;
+}
+.note.is-danger {
+    color: red;
+}
+.liste-item {
+    display: none;
+}
+input.indoor {
+    width: 94%;
+}
+.liste {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.liste li {
+    list-style: none;
+    margin-left: 1rem;
+}
+header {
+    padding-top: 1rem;
+}
+.header_content {
+    display: flex !important;
+    flex:1;
+    justify-content: space-between;
+}
+header .import, .hero .title {
+    max-width: 40% !important;
+    display: flex;
+    align-items: center;
+}
+.editfile {
+    width: 70%;
+}
+.vignette {
+    max-height: 50px;
+}
