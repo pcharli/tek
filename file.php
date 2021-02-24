@@ -51,7 +51,7 @@ if(isset($_POST['title'])) :
     //zippage
  
 $zip = new ZipArchive();
-$zip->open($slug.".rtk", ZipArchive::CREATE);
+$zip->open("exports/".$slug.".rtk", ZipArchive::CREATE);
   
 $zip->addFile('recipes.json');
 //$zip->addFile('fonts/Monoton/OFL.txt', 'license.txt');
@@ -94,7 +94,7 @@ unlink("recipes.json");
         </header>
         <main class="section container content">
             <h2>Récupérer la recette</h2>
-<a href="<?php echo $slug;?>.rkt">Télécharger</a><br/>
+<a href="exports/<?php echo $slug;?>.rkt">Télécharger</a><br/>
 <p>Ou scannez le QRCode</p>
 <div id="qrcode"></div>
 <!--<div id="qrcode2"></div>-->
@@ -103,7 +103,7 @@ unlink("recipes.json");
     </div>
 <script src="qrcode.min.js"></script>
 <script>
-    let url = "http://10.5.1.101/tek/"
+    let url = "https://cepegra.yo.fr/tek/exports/"
 var qrcode = new QRCode(document.getElementById("qrcode"), {
     text: url+"<?php echo $slug;?>.rtk",
     width: 128,

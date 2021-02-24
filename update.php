@@ -5,9 +5,10 @@ if( isset($_FILES['editfile']) AND $_FILES['editfile']['error'] == 0) :
     $name = $_FILES['editfile']['name'];
     $origin = $_FILES['editfile']['tmp_name'];
     move_uploaded_file($origin, $name);
+
     $zip = new ZipArchive();
     $zip->open($name, ZipArchive::CREATE);
-    $zip->extractTo('./');
+    $zip->extractTo('./', array('recipes_0.json'));
     $zip->close();
 
     $json = file_get_contents("recipes_0.json");
