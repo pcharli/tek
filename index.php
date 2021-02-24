@@ -181,8 +181,6 @@
         </main>
         <footer class="footer">&copy; l'R & l'O.be - 2021</footer>
     </div>
-    <script src="FileSaver.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.6.0/jszip.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
