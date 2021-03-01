@@ -85,12 +85,12 @@ try {
 
 $mail->isSMTP(); 
 $mail->SMTPDebug = 2; 
-$mail->Host = "smtp.gmail.com"; 
+$mail->Host = "smtp.mailersend.net"; 
 $mail->Port = "587"; // typically 587 
 $mail->SMTPSecure = 'tls'; // ssl is depracated
 $mail->SMTPAuth = true;
-$mail->Username = "charlier.pierre@gmail.com";
-$mail->Password = "goochrprr11";
+$mail->Username = "MS_zUtxk6@cepegra.yo.fr";
+$mail->Password = "QzneAzwEkBYrsZE7";
 
 $mail->setFrom("pcepegra@gmail.com", "Pierre");
 $mail->addAddress("lretlo@gmail.com", "send_to_Name");
