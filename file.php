@@ -88,8 +88,8 @@ $mail->Host = "smtp.gmail.com";
 $mail->Port = "587"; // typically 587 
 $mail->SMTPSecure = 'tls'; // ssl is depracated
 $mail->SMTPAuth = true;
-$mail->Username = "charlier.pierre@gmail.com";
-$mail->Password = "Goochrprr22";
+$mail->Username = "pcepegra@gmail.com";
+$mail->Password = "chrprr11";
 $mail->setFrom("pcepegra@gmail.com", "Pierre");
 $mail->addAddress("lretlo@gmail.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
