@@ -94,7 +94,7 @@ $body .= "n";
 // Et on commence notre deuxième partie qui va contenir le PDF
 $body .= '--'.$boundary."n";
 // On lui dit (dans le Content-type) que c'est un fichier PDF
-$body .= 'Content-Type: application/zip; name="'.$fichier.'"'."n";
+$body .= 'Content-Type: octet-stream; name="'.$fichier.'"'."n";
 $body .= 'Content-Transfer-Encoding: base64'."n";
 $body .= 'Content-Disposition: attachment; filename="'.$fichier.'"'."n";
 // Les entêtes sont finies, on met un deuxième retour à la ligne
