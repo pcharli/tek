@@ -82,15 +82,16 @@ require 'PHPMailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 try {
-/*$mail->isSMTP(); 
+
+$mail->isSMTP(); 
 $mail->SMTPDebug = 2; 
 $mail->Host = "smtp.gmail.com"; 
 $mail->Port = "587"; // typically 587 
 $mail->SMTPSecure = 'tls'; // ssl is depracated
 $mail->SMTPAuth = true;
-$mail->Username = "pcepegra@gmail.com";
-$mail->Password = "chrprr22";
-*/
+$mail->Username = "charlier.pierre@gmail.com";
+$mail->Password = "goochrprr11";
+
 $mail->setFrom("pcepegra@gmail.com", "Pierre");
 $mail->addAddress("lretlo@gmail.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
