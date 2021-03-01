@@ -82,14 +82,14 @@ require 'PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 try {
-//$mail->isSMTP(); 
-//$mail->SMTPDebug = 2; 
-//$mail->Host = "your_smtp_host"; 
-//$mail->Port = "your_smtp_port"; // typically 587 
-//$mail->SMTPSecure = 'tls'; // ssl is depracated
-//$mail->SMTPAuth = true;
-//$mail->Username = "your_mail_username";
-//$mail->Password = "your_mail_password";
+$mail->isSMTP(); 
+$mail->SMTPDebug = 2; 
+$mail->Host = "smtp.gmail.com"; 
+$mail->Port = "587"; // typically 587 
+$mail->SMTPSecure = 'tls'; // ssl is depracated
+$mail->SMTPAuth = true;
+$mail->Username = "lretlo@gmail.com";
+$mail->Password = "chrprr22";
 $mail->setFrom("pcepegra@gmail.com", "Pierre");
 $mail->addAddress("lretlo@gmail.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
