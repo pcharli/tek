@@ -90,7 +90,7 @@ $mail = new PHPMailer;
 //$mail->Username = "your_mail_username";
 //$mail->Password = "your_mail_password";
 $mail->setFrom("pcepegra@gmail.com", "Pierre");
-$mail->addAddress("lrerlo@gmail.com", "send_to_Name");
+$mail->addAddress("lretlo@gmail.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
 $mail->msgHTML("test body"); // remove if you do not want to send HTML email
 $mail->AltBody = 'HTML not supported';
