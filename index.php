@@ -187,6 +187,9 @@
 
 
             </form>
+            <hr>
+            <h1>Test</h1>
+            <a href="exports/beurre-de-noisettes-pureemonstercheffr.rtk">Télécharger</a>
         </main>
         <footer class="footer">&copy; <a href="https://lr-et-lo.be" target="_blank">l'R & l'O.be</a> - 2021</footer>
     </div>
