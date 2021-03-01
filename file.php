@@ -85,7 +85,7 @@ try {
 $mail->isSMTP(); 
 $mail->SMTPDebug = 2; 
 $mail->Host = "smtp.gmail.com"; 
-$mail->Port = "465"; // typically 587 
+$mail->Port = "587"; // typically 587 
 $mail->SMTPSecure = 'tls'; // ssl is depracated
 $mail->SMTPAuth = true;
 $mail->Username = "pcepegra@gmail.com";
