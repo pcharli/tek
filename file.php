@@ -1,4 +1,9 @@
 <?php 
+// path du dossier PHPMailer % fichier d'envoi du mail
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
 //print_r($_POST['favorite']);
 if(isset($_POST['title'])) :
     //slug
@@ -65,19 +70,33 @@ unlink("recipes.json");
 //print_r($json);
 
 //envoi par email
-require_once('phpmailer/PHPMmailer.php');
+// lance les classes de PHPMailer
+//use PHPMailer\src\PHPMailer;
+//use PHPMailer\src\Exception;
 
-$email = new PHPMailer();
-$email->SetFrom('pcepegra@gmail.com', 'Pierre <3'); //Name is optional
-$email->Subject   = 'Recette tek';
-$email->Body      = "essai";
-$email->AddAddress( 'lretlo@gmail.com' );
 
-$file_to_attach = "exports/".$slug.".rtk";
 
-$email->AddAttachment( $file_to_attach , $slug.".rtk" );
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-return $email->Send();
+$mail = new PHPMailer;
+//$mail->isSMTP(); 
+//$mail->SMTPDebug = 2; 
+//$mail->Host = "your_smtp_host"; 
+//$mail->Port = "your_smtp_port"; // typically 587 
+//$mail->SMTPSecure = 'tls'; // ssl is depracated
+//$mail->SMTPAuth = true;
+//$mail->Username = "your_mail_username";
+//$mail->Password = "your_mail_password";
+$mail->setFrom("pcepegra@gmail.com", "Pierre");
+$mail->addAddress("lrerlo@gmail.com", "send_to_Name");
+$mail->Subject = 'Any_subject_of_your_choice';
+$mail->msgHTML("test body"); // remove if you do not want to send HTML email
+$mail->AltBody = 'HTML not supported';
+$mail->addAttachment("exports/".$slug.".rtk"); //Attachment, can be skipped
+
+$mail->send();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
