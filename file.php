@@ -97,7 +97,7 @@ $mail->addAddress("info@mailsersend.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
 $mail->msgHTML("test body"); // remove if you do not want to send HTML email
 $mail->AltBody = 'HTML not supported';
-$mail->addAttachment("exports/".$slug.".rtk"); //Attachment, can be skipped
+//$mail->addAttachment("exports/".$slug.".rtk"); //Attachment, can be skipped
 
 $mail->send();
 echo "message envoyé";
