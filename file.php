@@ -92,7 +92,7 @@ $mail->SMTPAuth = true;
 $mail->Username = "MS_zUtxk6@cepegra.yo.fr";
 $mail->Password = "QzneAzwEkBYrsZE7";
 
-$mail->setFrom("pcepegra@gmail.com", "Pierre");
+$mail->setFrom("info@cepegra.yo.fr", "Pierre");
 $mail->addAddress("info@mailsersend.com", "send_to_Name");
 $mail->Subject = 'Any_subject_of_your_choice';
 $mail->msgHTML("test body"); // remove if you do not want to send HTML email
