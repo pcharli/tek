@@ -80,7 +80,8 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-$mail = new PHPMailer;
+$mail = new PHPMailer(true);
+try {
 //$mail->isSMTP(); 
 //$mail->SMTPDebug = 2; 
 //$mail->Host = "your_smtp_host"; 
@@ -97,6 +98,11 @@ $mail->AltBody = 'HTML not supported';
 $mail->addAttachment("exports/".$slug.".rtk"); //Attachment, can be skipped
 
 $mail->send();
+echo "message envoyé";
+}
+catch (Exception $e) {
+    echo "erreur d'envoi : {$mail->ErrorInfo}";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
