@@ -84,7 +84,7 @@ $mail = new PHPMailer(true);
 try {
 
 $mail->isSMTP(); 
-$mail->SMTPDebug = 2; 
+$mail->SMTPDebug = 4; 
 $mail->Host = "smtp.mailersend.net"; 
 $mail->Port = "587"; // typically 587 
 $mail->SMTPSecure = 'tls'; // ssl is depracated
