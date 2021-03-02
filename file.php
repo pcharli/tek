@@ -97,7 +97,8 @@ $mail->addAddress("lretlo@gmail.com", "send_to_Name");
 $mail->Subject = 'Votre recette Tek';
 $mail->msgHTML("Et hop"); // remove if you do not want to send HTML email
 $mail->AltBody = 'Et hip';
-$mail->addAttachment("exports/".$slug.".rtk", $slug.'.rtk'); //Attachment, can be skipped
+$mail->addAttachment("logo_white.svg", 'logo.svg');
+//$mail->addAttachment("exports/".$slug.".rtk", $slug.'.rtk'); //Attachment, can be skipped
 
 $mail->send();
 echo "message envoyé";
