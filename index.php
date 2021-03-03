@@ -23,6 +23,7 @@
                 <div class="container content">
                   <div class="header_content">
                   <h1 class="title"><a href="index.php"><img src="logo_white.svg" alt="" class="header_logo"></a> Recette Tek</h1>
+                  <a href="listing.php" class="button">Listing</a>
                   <form action="update.php" method="post" enctype="multipart/form-data" class="form import">
                     <label for="" class="label show">Edition: </label>&nbsp;
                     <input type="file" class="input newfile">&nbsp;
