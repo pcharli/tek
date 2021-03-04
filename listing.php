@@ -1,3 +1,10 @@
+<?php 
+if ( isset($_GET['del'])) :
+    unlink("exports/".$_GET['del']);
+    header("location:listing.php");
+    exit;
+endif;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +22,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
     <title>Recette Tek | Listing</title>
+
 </head>
 <body>
     <div class="page">
@@ -23,7 +31,7 @@
                 <div class="container content">
                   <div class="header_content">
                   <h1 class="title"><a href="index.php"><img src="logo_white.svg" alt="" class="header_logo"></a> Recette Tek</h1>
-                  <a href="listing.php" class="button">Listing</a>
+                  
                   <form action="update.php" method="post" enctype="multipart/form-data" class="form import">
                     <label for="" class="label show">Edition: </label>&nbsp;
                     <input type="file" class="input newfile">&nbsp;
@@ -44,13 +52,13 @@
                     if($file != '.' && $file != '..') :
             ?>
                 <li class="panel-block list-group-item">
-                <a href="exports/<?php echo $file;?>"><?php echo $file;?></a>
+                <a href="exports/<?php echo $file;?>"><?php echo $file;?></a>&nbsp;<a href="?del=<?php echo $file;?>" onclick="if(!confirm('Sûr ?')) {return false;}" class="delete"></a>
                 </li>
             <?php endif; endwhile; endif;?>
             </ul>   
         </main>
         <footer class="footer">&copy; <a href="https://lr-et-lo.be" target="_blank">l'R & l'O.be</a> - 2021</footer>
     </div>
-    <script src="main.js"></script>
+    <!--<script src="main.js"></script> -->
 </body>
 </html>

@@ -1,10 +1,11 @@
 <?php 
 // path du dossier PHPMailer % fichier d'envoi du mail
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+//use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\Exception;
 
 
 //print_r($_POST['favorite']);
+
 if(isset($_POST['title'])) :
     //slug
     $string = $_POST['title'];
@@ -40,6 +41,7 @@ if(isset($_POST['title'])) :
         endforeach;
         $_POST['tags'] = $array2;
     endif;
+
     // retrait échappements
     $_POST['ingredients'] = str_replace("\r", "", $_POST['ingredients']);
     $_POST['instructions'] = str_replace("\r", "", $_POST['instructions']);
@@ -55,27 +57,25 @@ if(isset($_POST['title'])) :
     file_put_contents("recipes.json", $json);
     //zippage
  
-$zip = new ZipArchive();
-$zip->open("exports/".$slug.".rtk", ZipArchive::CREATE);
+    $zip = new ZipArchive();
+    $zip->open("exports/".$slug.".rtk", ZipArchive::CREATE);
   
-$zip->addFile('recipes.json');
-//$zip->addFile('fonts/Monoton/OFL.txt', 'license.txt');
+    $zip->addFile('recipes.json');
+    //$zip->addFile('fonts/Monoton/OFL.txt', 'license.txt');
   
-$zip->close();
-unlink("recipes.json");
-//unlink("recipes_0.json");
- //phpinfo(32);
+    $zip->close();
+    unlink("recipes.json");
+    //unlink("recipes_0.json");
+    //phpinfo(32);
 
     //endzippage
+
 //print_r($json);
 
 //envoi par email
-// lance les classes de PHPMailer
-//use PHPMailer\src\PHPMailer;
-//use PHPMailer\src\Exception;
 
 
-
+/*
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
@@ -106,6 +106,7 @@ echo "message envoyé";
 catch (Exception $e) {
     echo "erreur d'envoi : {$mail->ErrorInfo}";
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -132,6 +133,7 @@ catch (Exception $e) {
                 <div class="container content">
                   <div class="header_content">
                   <h1 class="title"><a href="index.php"><img src="logo_white.svg" alt="" class="header_logo"></a> Recette Tek</h1>
+                  <a href="listing.php" class="button">Listing</a>
                   <form action="update.php" method="post" enctype="multipart/form-data" class="form import">
                     <label for="" class="label show">Edition: </label>&nbsp;
                     <input type="file" name="editfile" class="input editfile">&nbsp;
@@ -146,6 +148,8 @@ catch (Exception $e) {
 <a href="exports/<?php echo $slug;?>.rkt" class="button">Télécharger</a><br/>
 <p>Ou scannez le QRCode</p>
 <div id="qrcode"></div>
+<hr>
+<p><a class="button" href="listing.php">Accéder au listing des fichiers créés</a></p>
 <!--<div id="qrcode2"></div>-->
 </main>
 <footer class="footer">&copy; <a href="https://lr-et-lo.be" target="_blank">l'R & l'O.be</a> - 2021</footer>
